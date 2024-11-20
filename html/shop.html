@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../html/home.html" style="text-decoration: none; color: inherit;">Home</a></h1>
+        <div class="icons">
+            <a href="../html/login.html"><span>👤</span></a>
+        </div>
+    </header>
+    
+    <div class="sort">
+        <label for="sort">Sort by:</label>
+        <select id="sort" onchange="changeCategory(this.value)">
+            <option value="new">New Arrivals</option>
+            <option value="popular">Most Popular</option>
+        </select>
+    </div>
+
+    <!-- New Arrivals Products -->
+    <div class="products" id="new-arrivals-products">
+        <div class="product-card">
+            <img src="../images/cowboy.jpg" alt="New Arrival 1" onclick="showOnlyImage('cowboy.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/suit.jpg" alt="New Arrival 2" onclick="showOnlyImage('suit.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/black winter.jpg" alt="New Arrival 3" onclick="showOnlyImage('black winter.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/winter boy.jpg" alt="New Arrival 4" onclick="showOnlyImage('winter boy.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/business.jpg" alt="New Arrival 5" onclick="showOnlyImage('business.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+    </div>
+
+    <!-- Most Popular Products -->
+    <div class="products" id="most-popular-products" style="display: none;">
+        <div class="product-card">
+            <img src="../images/jacket man.jpg" alt="Most Popular Product 1" onclick="showOnlyImage('jacket man.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/blue jacket.jpg" alt="Most Popular Product 2" onclick="showOnlyImage('blue jacket.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/white girl.jpg" alt="Most Popular Product 3" onclick="showOnlyImage('white girl.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/winter girl.jpg" alt="Most Popular Product 4" onclick="showOnlyImage('winter girl.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+        <div class="product-card">
+            <img src="../images/forest girl.jpg" alt="Most Popular Product 5" onclick="showOnlyImage('forest girl.jpg')">
+            <a href="../html/shop detail.html"><button>Buy now</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>@Fashion company</p>
+    </footer>
+
+    <script src="../script/shop.script.js"></script>
+
+    <script>
+        // Get the image source from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageSrc = urlParams.get('image');
+
+        // Set the src of the product image if an image source is provided
+        if (imageSrc) {
+            document.getElementById('product-image').src = imageSrc;
+        }
+    </script>
+    
+</body>
+</html>
+

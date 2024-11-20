@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="../css/place order.css">
+</head>
+<body>
+  <header>
+    <h1><a href="../html/home.html">Home</a></h1>
+    <a href="../html/login.html"><div class="user-icon">👤</div></a>
+  </header>
+
+  <main>
+    <section class="order-form">
+      <div class="customer-info">
+        <h2>Customer Info</h2>
+        <form>
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required>
+
+          <label>Shipping Address</label>
+          <input type="text" placeholder="Enter shipping address" required>
+
+          <div class="address-details">
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Province" required>
+            <input type="text" placeholder="Postal code" required>
+          </div>
+
+          <label>Country</label>
+          <input type="text" placeholder="Enter your country" required>
+
+          <h2>Payment Info</h2>
+          <label>Card Number</label>
+          <input type="text" placeholder="Enter card number" required>
+
+          <div class="payment-details">
+            <input type="text" placeholder="Expiration Date" required>
+            <input type="text" placeholder="Security Code" required>
+          </div>
+          <button type="button" onclick="window.location.href='../html/order page.html';">Place Order</button>
+        </form>
+      </div>
+
+      <div class="order-summary">
+        <img src="../images/winter boy.jpg" alt="Product Image">
+        <h3>Order Summary</h3>
+        <p>Product Name</p>
+        <p>Price</p>
+      </div>
+    
+    </section>
+  </main>
+
+  <footer>
+    <p>@Fashion company</p>
+  </footer>
+
+  <script>
+    // Extract product details from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = urlParams.get('product');
+    const productPrice = urlParams.get('price');
+    const productImage = urlParams.get('image');
+
+    // Populate the order summary with the product details
+    if (productName && productPrice && productImage) {
+        document.querySelector('.order-summary img').src = `../images/${productImage}`;
+        document.querySelector('.order-summary h3').innerText = 'Order Summary';
+        document.querySelector('.order-summary p:first-of-type').innerText = productName;
+        document.querySelector('.order-summary p:last-of-type').innerText = `Price: €${productPrice}`;
+    }
+</script>
+
+</body>
+</html>

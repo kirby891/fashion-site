@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Change</title>
+  <link rel="stylesheet" href="../css/cloth colour.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="colors">
+    <div class="color color1" onclick="changeImage('../images/shirt_pink.jpg')"></div>
+    <div class="color color2" onclick="changeImage('../images/shirt_yellow.jpg')"></div>
+    <div class="color color3" onclick="changeImage('../images/shirt_blue.jpg')"></div>
+    <div class="color color4" onclick="changeImage('../images/shirt_purple.jpg')"></div>
+    <div class="color color5" onclick="changeImage('../images/shirt_red.jpg')"></div>
+    <div class="color color6" onclick="changeImage('../images/shirt_lightpink.jpg')"></div>
+  </div>
+
+  <div class="image-container">
+    <div class="icon">
+      <a href="trouser colour.html">
+        <img src="../images/shirt icon.png" alt="Clothes" width="30" height="30">
+      </a>
+    </div>
+    <a href="place order.html">
+      <div class="confirm-button">Confirm</div>
+    </a>
+    <img src="../images/cowboy.jpg" alt="Man" class="shirt-image" id="shirtImage">
+  </div>  
+</div>
+
+<script src="../script/cloth colour.script.js"></script>
+
+<script>
+  /**
+   * Change the displayed shirt image by updating its src attribute
+   * @param {string} imageUrl - The URL of the new image
+   */
+  function changeImage(imageUrl) {
+    const shirtImage = document.getElementById('shirtImage');
+    shirtImage.src = imageUrl;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="../css/shop detail.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="../html/home.html"><div class="nav-item">Home</div></a>
+        <a href="../html/shop.html"><div class="nav-item">Shop</div></a>
+        <div class="cart-icons">
+            <a href="../html/login.html"><span>👤</span></a>
+        </div>
+    </div>
+
+    <!-- Product Details Section -->
+    <div class="product-detail">
+        <img src="../images/winter boy.jpg" alt="Model with T-Shirt" class="product-image">
+        <div class="product-info">
+            <h1>Monogram T-Shirt</h1>
+            <p class="price">€ 99.00 EUR</p>
+            <p class="description">
+                Elevate your style with the Monogram T-Shirt, available in Persian Violet and Frosty Green.
+            </p>
+            <div class="options">
+                <div class="option">
+                    <span>Colour</span>
+                    <button>Original colour</button>
+                    <button onclick="window.location.href='../html/design page.html';">New design</button>
+                </div>
+                <div class="option">
+                    <span>Size</span>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                    <button>XXL</button>
+                </div>
+            </div>
+            <div class="actions">
+                <a href="../html/place order.html">
+                <button class="buy-now">Buy now</button>
+            </a>
+            </div>
+            <div class="review-section">
+                <h3>Review</h3>
+                <p>⭐⭐⭐⭐☆</p>
+                <p><strong>David</strong> ⭐⭐⭐⭐☆</p>
+                <p>This chunky sweater is incredibly cozy and stylish. </p>
+                <button class="write-review-btn">Write a review</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Form Popup -->
+    <div class="review-popup" id="reviewPopup">
+        <h3>Write a Review</h3>
+        <label for="score">Score</label>
+        <div class="score">⭐⭐⭐⭐⭐</div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <label for="review">Review</label>
+        <textarea id="review" placeholder="Write your review here"></textarea>
+        <button id="post@forelse ($collection as $item) 
+            
+        @empty 
+        
+        @endforelseReview">POST</button>
+    </div>
+
+    <footer>
+        <p>@Fashion company</p>
+    </footer>
+
+    <script src="../script/shop.script.js"></script>
+
+    <script>
+        // Extract the image parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageSrc = urlParams.get('image');
+
+        // Display the image in the product detail section
+        if (imageSrc) {
+            document.getElementById('product-image').src = imageSrc;
+        }
+    </script>
+</body>
+</html>
