@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .colors {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 20px;
+  }
+
+  .color {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .color1 { background-color: #FF6F91; }
+  .color2 { background-color: #F6F58D; }
+  .color3 { background-color: #00ff4c; }
+  .color4 { background-color: #42b5fd; }
+  .color5 { background-color: #b700ff; }
+  .color6 { background-color: #ffa1e3; }
+
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+  }
+
+  .shirt-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .confirm-button {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: white;
+    border: 2px solid #000;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .shirt-image {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.shirt-image.hide {
+    opacity: 0;
+}
+
+.shirt-image.show {
+    opacity: 1;
+}

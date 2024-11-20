@@ -1,0 +1,138 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #d7f1ff, #ffffc8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #d7f1ff;
+}
+
+.nav-item {
+    color: black;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.cart-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.product-detail {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.options, .actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.review-section {
+    margin-top: 20px;
+}
+
+.write-review-btn {
+    background-color: #d7f1ff;
+    font-weight: bold;
+}
+
+/* Review Popup */
+.review-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 10;
+}
+
+.review-popup h3 {
+    margin-bottom: 10px;
+}
+
+.review-popup label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.review-popup input, .review-popup textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.review-popup button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #d7f1ff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.review-popup .score {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Header with gradient background */
+.header {
+    width: auto;
+    background: linear-gradient(90deg, #f5faae, #b3e6ff); /* Yellow and green gradient */
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-icon {
+    font-size: 2em; /* Icon size */
+    margin-right: 20px;
+    text-decoration: none;  /* Remove underline */
+    display: inline-block;  /* Make it behave like a button */
+}
+
+/* Main container */
+.container {
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 1.5em;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.buttons a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Ensuring full page responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;  /* Smaller heading size on medium screens */
+    }
+
+    .user-icon {
+        font-size: 1.5em;  /* Smaller icon on medium screens */
+    }
+
+    p {
+        font-size: 1em;  /* Smaller paragraph text */
+    }
+
+    .buttons a {
+        font-size: 1em;  /* Adjust button text size */
+        padding: 8px 20px;  /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;  /* Smaller padding on small screens */
+    }
+
+    h1 {
+        font-size: 1.8em;  /* Even smaller heading on small screens */
+    }
+
+    p {
+        font-size: 0.9em;  /* Further reduce paragraph text */
+    }
+
+    .user-icon {
+        font-size: 1.2em;  /* Further reduce icon size */
+    }
+
+    .buttons a {
+        font-size: 0.9em;  /* Smaller button text */
+        padding: 6px 15px;  /* Smaller button padding */
+    }
+}

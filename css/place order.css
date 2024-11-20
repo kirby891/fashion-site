@@ -1,0 +1,103 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background: linear-gradient(to right, #d5f3e5, #e8d9ff);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    text-decoration: none;  /* Remove underline */
+    display: inline-block;  /* Make it behave like a button */
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .order-form {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .customer-info {
+    flex: 1;
+  }
+  
+  .customer-info form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .customer-info label {
+    margin-top: 10px;
+  }
+  
+  .customer-info input {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .address-details, .payment-details {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2d2d2d;
+  }
+  
+  .order-summary {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .order-summary img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #d5f3e5, #e8d9ff);
+  }
+  
